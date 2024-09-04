@@ -55,7 +55,11 @@ class FloorPlanSurface: SKNode {
             drawWall()
         case .window:
             drawWindow()
+        case .floor:
+            // Handle floor or skip if not needed
+            break
         @unknown default:
+            print("Warning: Unknown surface category encountered: \(capturedSurface.category)")
             drawWall()
         }
     }
